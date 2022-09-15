@@ -1,4 +1,5 @@
 import 'dart:collection';
+
 import 'package:dartx/dartx.dart';
 
 class Json {
@@ -16,7 +17,7 @@ class Json {
         );
       }
       return Json(
-        stringList: List<String>.from(data),
+        stringList: (data).map((e) => e.toString()).toList(),
       );
     }
     return const Json();
